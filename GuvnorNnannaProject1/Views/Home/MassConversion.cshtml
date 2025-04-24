@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Mass Conversion";
+}
+
+<h2>Mass Conversion: Kilograms to Pounds</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label for="kilograms">Enter weight in kilograms:</label>
+        <input type="any" name="kilograms" step="any" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-primary mt-2">Convert</button>
+</form>
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger mt-3">
+        @ViewBag.Error
+    </div>
+}
+
+@if (ViewBag.Pounds != null)
+{
+    <div class="alert alert-info mt-3">
+        @ViewBag.Kilograms kg = @ViewBag.Pounds lbs
+    </div>
+}
+
+<a href="/" class="btn btn-link mt-3">Return to Landing Page</a>
